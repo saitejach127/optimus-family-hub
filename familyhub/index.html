@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Hub - Optimus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="../index.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">&nbsp;&nbsp; Optimus</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">User App <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/member">Member App</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container mt-4">
+        <h3>Family Hub</h3>
+        <p class="text-muted">Show your love & care with your family members with our tailored family card</p>
+        <div class="card shadow-sm mt-4 p-3">
+            <h4>Total spends</h4>
+            <p class="display-4"><b>$250/$300</b></p>
+            <div class="d-flex align-items-center mb-3">
+                <img src="./person.jpg" class="rounded-circle" width="40" height="40" alt="Bob Smith">
+                <p class="mb-0 ms-2">Bob Smith</p>
+            </div>
+            <div class="progress mb-2">
+                <div class="progress-bar" role="progressbar" style="width: 83%;" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <span>$250</span>
+                <span>$300</span>
+            </div>
+            <div class="d-flex justify-content-around mt-4">
+                <div class="circle-icon text-center" data-bs-toggle="modal" data-bs-target="#addMoneyModal">
+                    <img src="./plusicon.png" width="32" height="32" class="rounded-circle" alt="Add Money">
+                    <p class="text-center">Add Money</p>
+                </div>
+                <div class="circle-icon text-center" data-bs-toggle="modal" data-bs-target="#showTransactionsModal">
+                    <img src="../time.svg" width="32" height="32" class="rounded-circle" alt="Show Transactions">
+                    <p class="text-center">Show Transactions</p>
+                </div>
+                <div class="circle-icon text-center" data-bs-toggle="modal" data-bs-target="#freezeAccountModal">
+                    <img src="./freeze.png" width="32" height="32" class="rounded-circle" alt="Freeze">
+                    <p class="text-center">Freeze</p>
+                </div>
+                <div class="circle-icon text-center" data-bs-toggle="modal" data-bs-target="#setLimitsModal">
+                    <img src="./limits.jpg" width="32" height="32" class="rounded-circle" alt="Set Limits">
+                    <p class="text-center">Set Limits</p>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary w-100 fixed-bottom p-3" data-bs-toggle="modal" data-bs-target="#newMemberModal">Add new Member</button>
+    </div>
+
+    <!-- Add Money Modal -->
+    <div class="modal fade" id="addMoneyModal" tabindex="-1" aria-labelledby="addMoneyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addMoneyModalLabel">Add Money</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Add Money</h5>
+                    <p>Add Money in a giphy</p>
+                    <h5>Balance</h5>
+                    <div class="progress mb-2">
+                        <div class="progress-bar" role="progressbar" style="width: 5%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>$50</span>
+                        <span>$1000</span>
+                    </div>
+                    <div class="mt-3">
+                        <input type="number" class="form-control" placeholder="Enter amount">
+                    </div>
+                    <div class="d-flex justify-content-around mt-3">
+                        <button class="btn btn-outline-primary" onclick="document.querySelector('.form-control').value=100">$100</button>
+                        <button class="btn btn-outline-primary" onclick="document.querySelector('.form-control').value=200">$200</button>
+                        <button class="btn btn-outline-primary" onclick="document.querySelector('.form-control').value=500">$500</button>
+                    </div>
+                    <h5 class="mt-4">Frequency</h5>
+                    <div class="d-flex justify-content-around mt-3">
+                        <button class="btn btn-outline-secondary">One time</button>
+                        <button class="btn btn-outline-secondary">Weekly</button>
+                        <button class="btn btn-outline-secondary">Monthly</button>
+                    </div>
+                    <button class="btn btn-primary mt-4" data-bs-dismiss="modal">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Show Transactions Modal -->
+    <div class="modal fade" id="showTransactionsModal" tabindex="-1" aria-labelledby="showTransactionsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="showTransactionsModalLabel">Transactions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card shadow-sm mb-3">
+                        <div class="d-flex align-items-center p-3">
+                            <img src="./person.jpg" class="rounded-circle" width="40" height="40" alt="Person">
+                            <div class="ms-3">
+                                <h6 class="mb-0">Amazon</h6>
+                                <small>2nd March 2013</small>
+                            </div>
+                            <div class="ms-auto">
+                                <h6 class="mb-0 text-danger">-$300</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm mb-3">
+                        <div class="d-flex align-items-center p-3">
+                            <img src="./person.jpg" class="rounded-circle" width="40" height="40" alt="Person">
+                            <div class="ms-3">
+                                <h6 class="mb-0">Target</h6>
+                                <small>5th April 2014</small>
+                            </div>
+                            <div class="ms-auto">
+                                <h6 class="mb-0 text-danger">-$150</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm mb-3">
+                        <div class="d-flex align-items-center p-3">
+                            <img src="./person.jpg" class="rounded-circle" width="40" height="40" alt="Person">
+                            <div class="ms-3">
+                                <h6 class="mb-0">Walmart</h6>
+                                <small>10th May 2015</small>
+                            </div>
+                            <div class="ms-auto">
+                                <h6 class="mb-0 text-danger">-$200</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm mb-3">
+                        <div class="d-flex align-items-center p-3">
+                            <img src="./person.jpg" class="rounded-circle" width="40" height="40" alt="Person">
+                            <div class="ms-3">
+                                <h6 class="mb-0">Best Buy</h6>
+                                <small>15th June 2016</small>
+                            </div>
+                            <div class="ms-auto">
+                                <h6 class="mb-0 text-danger">-$400</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm mb-3">
+                        <div class="d-flex align-items-center p-3">
+                            <img src="./person.jpg" class="rounded-circle" width="40" height="40" alt="Person">
+                            <div class="ms-3">
+                                <h6 class="mb-0">Costco</h6>
+                                <small>20th July 2017</small>
+                            </div>
+                            <div class="ms-auto">
+                                <h6 class="mb-0 text-danger">-$250</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm mb-3">
+                        <div class="d-flex align-items-center p-3">
+                            <img src="./person.jpg" class="rounded-circle" width="40" height="40" alt="Person">
+                            <div class="ms-3">
+                                <h6 class="mb-0">eBay</h6>
+                                <small>25th August 2018</small>
+                            </div>
+                            <div class="ms-auto">
+                                <h6 class="mb-0 text-danger">-$100</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm mb-3">
+                        <div class="d-flex align-items-center p-3">
+                            <img src="./person.jpg" class="rounded-circle" width="40" height="40" alt="Person">
+                            <div class="ms-3">
+                                <h6 class="mb-0">Apple</h6>
+                                <small>30th September 2019</small>
+                            </div>
+                            <div class="ms-auto">
+                                <h6 class="mb-0 text-danger">-$500</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm mb-3">
+                        <div class="d-flex align-items-center p-3">
+                            <img src="./person.jpg" class="rounded-circle" width="40" height="40" alt="Person">
+                            <div class="ms-3">
+                                <h6 class="mb-0">Microsoft</h6>
+                                <small>5th October 2020</small>
+                            </div>
+                            <div class="ms-auto">
+                                <h6 class="mb-0 text-danger">-$350</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm mb-3">
+                        <div class="d-flex align-items-center p-3">
+                            <img src="./person.jpg" class="rounded-circle" width="40" height="40" alt="Person">
+                            <div class="ms-3">
+                                <h6 class="mb-0">Nike</h6>
+                                <small>12th November 2021</small>
+                            </div>
+                            <div class="ms-auto">
+                                <h6 class="mb-0 text-danger">-$180</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm mb-3">
+                        <div class="d-flex align-items-center p-3">
+                            <img src="./person.jpg" class="rounded-circle" width="40" height="40" alt="Person">
+                            <div class="ms-3">
+                                <h6 class="mb-0">Adidas</h6>
+                                <small>20th December 2022</small>
+                            </div>
+                            <div class="ms-auto">
+                                <h6 class="mb-0 text-danger">-$220</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Freeze Account Modal -->
+    <div class="modal fade" id="freezeAccountModal" tabindex="-1" aria-labelledby="freezeAccountModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="freezeAccountModalLabel">Freeze Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Freeze Account</h5>
+                    <p>Are you sure you want to freeze the account?</p>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="reportFraud">
+                        <label class="form-check-label" for="reportFraud">
+                            Report Fraud
+                        </label>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-primary me-2" data-bs-dismiss="modal">Cancel</button>
+                        <button class="btn btn-danger" data-bs-dismiss="modal">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Set Limits Modal -->
+    <div class="modal fade" id="setLimitsModal" tabindex="-1" aria-labelledby="setLimitsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="setLimitsModalLabel">Set Limits</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Set Limits</h5>
+                    <div class="mb-4">
+                        <label for="dailyLimit" class="form-label">Daily Limit</label>
+                        <div class="d-flex align-items-center">
+                            <span id="dailyLimitMin">$0</span>
+                            <input type="range" class="form-range mx-3" id="dailyLimit" min="0" max="1000" step="10" oninput="document.getElementById('dailyLimitValue').value = this.value">
+                            <span id="dailyLimitMax">$1000</span>
+                            <input type="text" class="form-control ms-3" id="dailyLimitValue" value="0" readonly>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="weeklyLimit" class="form-label">Weekly Limit</label>
+                        <div class="d-flex align-items-center">
+                            <span id="weeklyLimitMin">$0</span>
+                            <input type="range" class="form-range mx-3" id="weeklyLimit" min="0" max="500" step="50" oninput="document.getElementById('weeklyLimitValue').value = this.value">
+                            <span id="weeklyLimitMax">$500</span>
+                            <input type="text" class="form-control ms-3" id="weeklyLimitValue" value="0" readonly>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="monthlyLimit" class="form-label">Monthly Limit</label>
+                        <div class="d-flex align-items-center">
+                            <span id="monthlyLimitMin">$0</span>
+                            <input type="range" class="form-range mx-3" id="monthlyLimit" min="0" max="2000" step="100" oninput="document.getElementById('monthlyLimitValue').value = this.value">
+                            <span id="monthlyLimitMax">$2000</span>
+                            <input type="text" class="form-control ms-3" id="monthlyLimitValue" value="0" readonly>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Member Modal -->
+    <div class="modal fade" id="newMemberModal" tabindex="-1" aria-labelledby="newMemberModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newMemberModalLabel">New Member</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="relationship" class="form-label">Relationship</label>
+                            <select class="form-select" id="relationship">
+                                <option>Spouse</option>
+                                <option>Child</option>
+                                <option>Parent</option>
+                                <option>Relative</option>
+                            </select>
+                        </div>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="existing-user-tab" data-bs-toggle="tab" data-bs-target="#existing-user" type="button" role="tab" aria-controls="existing-user" aria-selected="true">Existing Optimus User</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="new-user-tab" data-bs-toggle="tab" data-bs-target="#new-user" type="button" role="tab" aria-controls="new-user" aria-selected="false">New User</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="existing-user" role="tabpanel" aria-labelledby="existing-user-tab">
+                                <div class="mt-3">
+                                    <label for="existingUser" class="form-label">Select User</label>
+                                    <select class="form-select" id="existingUser">
+                                        <option>User 1</option>
+                                        <option>User 2</option>
+                                        <option>User 3</option>
+                                        <option>User 4</option>
+                                        <option>User 5</option>
+                                        <option>User 6</option>
+                                        <option>User 7</option>
+                                        <option>User 8</option>
+                                        <option>User 9</option>
+                                        <option>User 10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="new-user" role="tabpanel" aria-labelledby="new-user-tab">
+                                <div class="mt-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                                <div class="mt-3">
+                                    <label for="age" class="form-label">Age</label>
+                                    <input type="number" class="form-control" id="age">
+                                </div>
+                                <div class="mt-3">
+                                    <label for="gender" class="form-label">Gender</label>
+                                    <select class="form-select" id="gender">
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="mt-3">
+                                    <label for="phone" class="form-label">Phone number</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="mt-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary mt-4" data-bs-dismiss="modal">Send Invite</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../index.js"></script>
+</body>
+</html>
