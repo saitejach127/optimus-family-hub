@@ -1,0 +1,17 @@
+.circle-icon {
+    text-align: center;
+    margin: 10px;
+}
+.circle-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    padding: 20px;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Hub - Optimus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="./index.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">&nbsp;&nbsp; Optimus</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">User App <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Member App</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container mt-4">
+        <div class="card mb-4">
+            <img src="./card.webp" class="card-img-top" alt="Credit Card">
+        </div>
+        <div class="d-flex justify-content-around">
+            <div class="circle-icon text-center">
+                <img src="./time.svg" width="32" height="32" class="rounded-circle" alt="Section 1">
+                <p class="text-center">Pay Dues</p>
+            </div>
+            <div class="circle-icon text-center" onclick="window.location.href = 'familyhub/index.html';">
+                <img src="./time.svg" width="32" height="32" class="rounded-circle" alt="Section 2">
+                <p class="text-center">Family Hub</p>
+            </div>
+            <div class="circle-icon text-center">
+                <img src="./time.svg" width="32" height="32" class="rounded-circle" alt="Section 3">
+                <p class="text-center">Bills</p>
+            </div>
+        </div>
+        <div class="mt-4">
+            <h3>Your spending limit</h3>
+            <p>$2500/$3000</p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 83%;" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="mt-4">
+            <h3>Shopping</h3>
+            <div class="d-flex justify-content-around">
+                <div class="circle-icon text-center">
+                    <img src="./time.svg" width="32" height="32" class="rounded-circle" alt="Amazon">
+                    <p class="text-center">Amazon</p>
+                </div>
+                <div class="circle-icon text-center">
+                    <img src="./time.svg" width="32" height="32" class="rounded-circle" alt="Casper">
+                    <p class="text-center">Casper</p>
+                </div>
+                <div class="circle-icon text-center">
+                    <img src="./time.svg" width="32" height="32" class="rounded-circle" alt="Flipkart">
+                    <p class="text-center">Flipkart</p>
+                </div>
+                <div class="circle-icon text-center">
+                    <img src="./time.svg" width="32" height="32" class="rounded-circle" alt="Meesho">
+                    <p class="text-center">Meesho</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
